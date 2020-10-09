@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  margin: auto;
+
+  max-width: 1280px;
+  height: 500px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
