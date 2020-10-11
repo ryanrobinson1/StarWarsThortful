@@ -1,0 +1,16 @@
+<div class="simple-card-container">
+  <div
+    [ngClass]="
+      isOriginalTheme
+        ? 'simple-card-button animation'
+        : 'simple-card-button dark-mode animation'
+    "
+  >
+    <a routerLink="{{ navigationLink }}">
+      <img class="simple-card-img-top" src="{{ imgSrc }}" />
+      <h5 class="simple-card-title">
+        {{ simpleCardTitle }}
+      </h5>
+    </a>
+  </div>
+</div>

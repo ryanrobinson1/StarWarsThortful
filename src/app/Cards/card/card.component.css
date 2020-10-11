@@ -1,0 +1,135 @@
+.card-container {
+  display: grid;
+  margin: 20px auto;
+  max-width: 60%;
+
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px -4px #8c8c8c;
+}
+
+.card-row {
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+}
+
+.image-container {
+  padding: 20px;
+}
+
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-title {
+  padding: 20px;
+  font-size: 2rem;
+  color: var(--text-light-theme);
+}
+
+.card-title-dark-mode {
+  padding: 20px;
+  font-size: 2rem;
+  color: var(--text-dark-theme);
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+/* Accordion */
+.accordion {
+  background-color: none;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-bottom: #444;
+  outline: none;
+  transition: 0.4s;
+
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.panel-active {
+  padding: 0 18px;
+  background-color: white;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.panel-deactive {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.accordion:after {
+  content: "\02795";
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796";
+}
+
+.accordion-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-light-theme);
+}
+
+.accordion-text-dark-mode {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-dark-theme);
+}
+
+.list {
+  padding: 20px;
+  line-height: 1.5;
+}
+
+.list .list-item {
+  text-decoration: none;
+  list-style-type: circle;
+  font-size: 1.25rem;
+  color: var(--text-light-theme);
+}
+
+.list.list-dark-mode .list-item {
+  text-decoration: none;
+  list-style-type: circle;
+  font-size: 1.25rem;
+  /* color: var(--text-dark-theme); */
+}
+
+@media only screen and (max-width: 1280px) {
+  .card-container {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,85 @@
+<div class="card-container">
+  <div class="card-row">
+    <div class="image-container">
+      <img class="card-img-top" src="{{ cardImage }}" />
+    </div>
+    <hr />
+    <div class="card-body">
+      <h5 [ngClass]="isOriginalTheme ? 'card-title' : 'card-title-dark-mode'">
+        {{ peopleModel.name }}
+      </h5>
+      <button
+        class="accordion"
+        (click)="onClickAccordionOne()"
+        [ngClass]="statusOne ? 'active' : ''"
+      >
+        <h5
+          [ngClass]="
+            isOriginalTheme ? 'accordion-text' : 'accordion-text-dark-mode'
+          "
+        >
+          Bio
+        </h5>
+      </button>
+      <div
+        class="panel"
+        [ngClass]="statusOne ? 'panel-active' : 'panel-deactive'"
+      >
+        <ul [ngClass]="isOriginalTheme ? 'list' : 'list list-dark-mode'">
+          <li class="list-item">Gender: {{ peopleModel.gender }}</li>
+          <li class="list-item">Birth Year: {{ peopleModel.birth_year }}</li>
+          <li class="list-item">Mass: {{ peopleModel.mass }}kg</li>
+          <li class="list-item">Height: {{ peopleModel.height }}cm</li>
+
+          <li class="list-item">Hair Color: {{ peopleModel.hair_color }}</li>
+          <li class="list-item">Skin Color: {{ peopleModel.skin_color }}</li>
+          <li class="list-item">Eye Color: {{ peopleModel.eye_color }}</li>
+        </ul>
+      </div>
+
+      <button
+        class="accordion"
+        (click)="onClickAccordionTwo()"
+        [ngClass]="statusTwo ? 'active' : ''"
+      >
+        <h5
+          [ngClass]="
+            isOriginalTheme ? 'accordion-text' : 'accordion-text-dark-mode'
+          "
+        >
+          Vehicles & Spaceships
+        </h5>
+      </button>
+      <div
+        class="panel"
+        [ngClass]="statusTwo ? 'panel-active' : 'panel-deactive'"
+      >
+        <ul class="list">
+          <li class="list-item">Static Dummy Data</li>
+        </ul>
+      </div>
+
+      <button
+        class="accordion"
+        (click)="onClickAccordionThree()"
+        [ngClass]="statusThree ? 'active' : ''"
+      >
+        <h5
+          [ngClass]="
+            isOriginalTheme ? 'accordion-text' : 'accordion-text-dark-mode'
+          "
+        >
+          Filmography
+        </h5>
+      </button>
+      <div
+        class="panel"
+        [ngClass]="statusThree ? 'panel-active' : 'panel-deactive'"
+      >
+        <ul class="list">
+          <li class="list-item">Static Dummy Data</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

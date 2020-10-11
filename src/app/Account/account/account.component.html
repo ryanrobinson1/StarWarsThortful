@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <h1 [ngClass]="isOriginalTheme ? 'heading' : 'heading-dark-mode'">
+      Account Details
+    </h1>
+  </div>
+  <div class="row">
+    <button class="button button-primary" (click)="toggleTheme()">
+      Toggle Theme
+    </button>
+  </div>
+</div>

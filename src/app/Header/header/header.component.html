@@ -1,0 +1,25 @@
+<header>
+  <nav
+    [ngClass]="isOriginalTheme ? 'nav-container' : 'nav-container-dark-mode'"
+  >
+    <ul class="nav">
+      <a class="nav-brand" href="{{ githubLink }}">GitHub</a>
+      <a class="nav-brand-logo" routerLink="/">
+        <img src="{{ starWarsLogoSrc }}" />
+      </a>
+
+      <div
+        [ngClass]="
+          isOriginalTheme ? 'nav-links' : 'nav-links nav-links-dark-mode'
+        "
+      >
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/people">Characters</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/account">Account</a>
+        </li>
+      </div>
+    </ul>
+  </nav>
+</header>

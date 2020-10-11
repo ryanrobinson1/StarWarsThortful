@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div>
+      <h1
+        [ngClass]="
+          isOriginalTheme
+            ? 'introduction-section'
+            : 'introduction-section-dark-mode'
+        "
+      >
+        {{ searchForCharacters }}
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <app-search
+      (updatedSearchDataEvent)="updatePeopleModelData($event)"
+      [searchType]="searchType"
+    ></app-search>
+    <app-card [cardImage]="cardImage" [peopleModel]="peopleModel"></app-card>
+  </div>
+</div>
