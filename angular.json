@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/TestSearch",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -109,7 +109,7 @@
       }
     }
   },
-  "defaultProject": "TestSearch",
+  "defaultProject": "StarWarsAPIThortful",
   "cli": {
     "analytics": "d902b374-b3c8-4542-a939-6d0b76793b71"
   }
