@@ -7,7 +7,7 @@ import { ThemeService } from 'src/app/Service/Internal/theme.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  githubLink = 'https://github.com/ryanrobinson1';
+  githubLink = 'https://github.com/ryanrobinson1/StarWarsThortful';
   starWarsLogoSrc = '../../../assets/images/starWarsLogo.png';
   isOriginalTheme: boolean = this.themeService.isOriginalTheme;
 

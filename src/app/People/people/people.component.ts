@@ -19,9 +19,7 @@ export class PeopleComponent implements OnInit {
   constructor(
     private peopleService: PeopleService,
     private themeService: ThemeService
-  ) {
-    this.peopleService.searchPeopleStubbed();
-  }
+  ) {}
 
   ngOnInit(): void {
     // this.peopleService.searchPeople('obi').subscribe((res) => {

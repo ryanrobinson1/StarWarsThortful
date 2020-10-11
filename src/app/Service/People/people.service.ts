@@ -19,22 +19,19 @@ export class PeopleService {
   constructor(private http: HttpClient) {}
 
   searchPeople(query: string): Observable<PeopleModel> {
-    console.log('***** BEGIN SEARCH PEOPLE ****** with query', query);
-    let peopleSearchURL: string = 'https://swapi.dev/api/people'; // URL to web api
+    let peopleSearchURL: string = 'https://swapi.dev/api/people';
     let params = new HttpParams().set('search', query);
 
     return this.http
       .get<PeopleModel>(peopleSearchURL, { params })
       .pipe(
         map((data: any) => {
-          console.log('is data valid??', data.results[0]);
           return data.results[0];
         })
       );
   }
 
   searchPeopleStubbed() {
-    console.log('searching people stubbed');
     this.subject.next(this.loadDummyData());
   }
 
