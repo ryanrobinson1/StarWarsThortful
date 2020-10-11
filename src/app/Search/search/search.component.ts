@@ -16,16 +16,23 @@ export class SearchComponent implements OnInit {
 
   constructor(private peopleService: PeopleService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.peopleService.dummyDataObservable.subscribe((res) => {
+      this.updatedSearchDataEvent.emit(res);
+    });
+  }
 
   onSubmit(form: NgForm) {
     switch (this.searchType) {
+      // case 'People':
+      //   this.peopleService
+      //     .searchPeople(form.value.searchTerm)
+      //     .subscribe((res) => {
+      //       this.updatedSearchDataEvent.emit(res);
+      //     });
+      //   break;
       case 'People':
-        this.peopleService
-          .searchPeople(form.value.searchTerm)
-          .subscribe((res) => {
-            this.updatedSearchDataEvent.emit(res);
-          });
+        this.peopleService.searchPeopleStubbed();
         break;
       default:
         break;

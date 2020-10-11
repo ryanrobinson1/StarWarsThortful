@@ -1,4 +1,4 @@
-export interface PeopleModel {
+export class PeopleModel {
   name: string;
   gender: string;
   birth_year: any;
