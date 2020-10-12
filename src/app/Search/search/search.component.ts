@@ -24,15 +24,12 @@ export class SearchComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     switch (this.searchType) {
-      // case 'People':
-      //   this.peopleService
-      //     .searchPeople(form.value.searchTerm)
-      //     .subscribe((res) => {
-      //       this.updatedSearchDataEvent.emit(res);
-      //     });
-      //   break;
       case 'People':
-        this.peopleService.searchPeopleStubbed();
+        this.peopleService
+          .searchPeople(form.value.searchTerm)
+          .subscribe((res) => {
+            this.updatedSearchDataEvent.emit(res);
+          });
         break;
       default:
         break;

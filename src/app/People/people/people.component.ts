@@ -22,27 +22,12 @@ export class PeopleComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.peopleService.searchPeople('obi').subscribe((res) => {
-    //   this.peopleModel = res;
-    // });
-    this.peopleModel = this.loadDummyData();
+    this.peopleService.searchPeople('obi').subscribe((res) => {
+      this.peopleModel = res;
+    });
   }
 
   updatePeopleModelData(event) {
     this.peopleModel = event;
-  }
-
-  loadDummyData() {
-    let dummyData = new PeopleModel();
-    dummyData.name = 'Ryan Robinson';
-    dummyData.gender = 'Male';
-    dummyData.birth_year = '1700';
-    dummyData.mass = 200;
-    dummyData.height = 212;
-    dummyData.hair_color = 'Pink';
-    dummyData.skin_color = 'Magenta';
-    dummyData.eye_color = 'Brown';
-
-    return dummyData;
   }
 }

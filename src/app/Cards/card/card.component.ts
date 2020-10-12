@@ -12,7 +12,6 @@ export class CardComponent implements OnInit {
   @Input() peopleModel: PeopleModel;
   isOriginalTheme: boolean = this.themeService.isOriginalTheme;
 
-  // accordion = document.getElementsByClassName('accordion');
   statusOne: boolean = false;
   statusTwo: boolean = false;
   statusThree: boolean = false;
